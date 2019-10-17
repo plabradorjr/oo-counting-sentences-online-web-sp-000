@@ -15,6 +15,15 @@ class String
   end
 
   def count_sentences
-
+    sentence_array = self.split
+    count = 0
+    sentence_array.each do |word|
+      if word[word.size - 1].end_with?("." || "!" || "?")
+        count += 1
+      end
+    end
+    count
   end
+
+
 end
