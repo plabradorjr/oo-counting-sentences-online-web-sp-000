@@ -17,6 +17,7 @@ class String
   def count_sentences
     sentence_array = self.split
     count = 0
+    binding.pry 
     sentence_array.each do |word|
       if word[word.size - 1].end_with?("." || "!" || "?")
         count += 1
